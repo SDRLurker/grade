@@ -2,7 +2,7 @@ $(function(){
 	var flag = false;
 	$("#duplcheck").on("click",function(){
 		$.ajax({
-			url: "/duplcheck",
+			url: "/admin/duplcheck",
     	type: 'POST',
     	data: {
 						"csrfmiddlewaretoken": jQuery("[name=csrfmiddlewaretoken]").val(),

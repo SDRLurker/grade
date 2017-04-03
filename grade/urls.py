@@ -21,10 +21,10 @@ from django.views.generic import TemplateView
 from manager.views import DuplicationCheck
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^accounts/login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, {'next_page': '/accounts/login/',}, name='logout_url'),
-    url(r'^signup/$', signup, name='signup'),
-    url(r'^signup_ok/$',TemplateView.as_view(template_name='registration/signup_ok.html'), name='signup_ok'),
-    url(r'^duplcheck$', DuplicationCheck.as_view(), name='duplcheck'),
+    #url(r'^admin/', admin.site.urls),
+    url(r'^admin/login/$', auth_views.login, name='login', kwargs={'template_name': 'admin_login.html'}),
+    url(r'^admin/logout/$', auth_views.logout, {'next_page': 'admin/login/',}, name='logout_url'),
+    url(r'^admin/signup/$', signup, name='signup'),
+    url(r'^admin/signup_ok/$',TemplateView.as_view(template_name='admin_signup_ok.html'), name='signup_ok'),
+    url(r'^admin/duplcheck$', DuplicationCheck.as_view(), name='duplcheck'),
 ]

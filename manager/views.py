@@ -21,7 +21,7 @@ def signup(request):
             )
     elif request.method =="GET":
         userform = RegisterForm()
-    return render(request, "registration/signup.html", {"userform": userform,})
+    return render(request, "admin_signup.html", {"userform": userform,})
 
 class DuplicationCheck(View):
     def post(self, request):
