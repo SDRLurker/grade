@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
+{% extends "admin_layout.html" %}
+
+{% block content %}
 		<center>
-			Successfully signed up. Do you wanto to log in?<br>
-			<a href="{% url 'login' %}"> Log In</a>
+			성공적으로 가입되었습니다. 로그인 하시겠습니까?<br>
+			<a href="{% url 'login' %}">로그인</a>
 		</center>
-	</body>
-</html>
+{% endblock %}

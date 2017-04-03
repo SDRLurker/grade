@@ -1,10 +1,12 @@
-{% load staticfiles %}
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <title>{% block page_title %}Grade Manager{% endblock %}</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="{% static 'js/jquery-3.2.0.min.js' %}"></script>
 </head>
 
